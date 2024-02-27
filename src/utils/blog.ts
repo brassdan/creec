@@ -103,7 +103,7 @@ const getRandomizedPosts = (array: Post[], num: number) => {
 };
 
 const load = async function (): Promise<Array<Post>> {
-  const posts = await getCollection('post');
+  const posts = await getCollection('posts');
   const normalizedPosts = posts.map(async (post) => await getNormalizedPost(post));
 
   const results = (await Promise.all(normalizedPosts))
