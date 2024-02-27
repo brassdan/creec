@@ -178,6 +178,8 @@ export interface Disclaimer {
 export interface CallToAction extends HTMLAttributes<a> {
   variant?: 'primary' | 'secondary' | 'tertiary' | 'link';
   text?: string;
+  href?: string;
+  target?: string;
   icon?: string;
   classes?: Record<string, string>;
   type?: 'button' | 'submit' | 'reset';
