@@ -1,0 +1,82 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Partners and Friends',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Partners and Friends"
+    image={{ src: '~/assets/images/IMG_20190420_120358_01 2.jpg', alt: 'Coastal Cleanup Event' }}
+  >
+    <Fragment slot="title">
+      Carquinez Regional Environmental Education Center <br />
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      CREEC is a tax-exempt 501(c)(3) public interest charity incorporated in 1995. 
+    </Fragment>
+  </Hero>
+  
+  <!-- Features3 Widget ************** -->
+  <Features3
+    title="CREEC Partners and Friends"
+    columns={2}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'C&H Sugar/ASR',
+        description:
+          "In 2021, C&H Sugar/ASR provided funds for CREEC to continue its student- and volunteer-led effort to restore coast live oak forest and other native trees to the area under the Carquinez Bridge. Every little bit of habitat counts, and these plantings will grow to provide habitat for wildlife and aesthetic value for many years to come.",
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Phillips 66',
+        description:
+          "In 2021, Phillips 66 provided support to CREEC and the Contra Costa Resource Conservation District to institute a new onsite education program for middle school students. They have also funded native oak woodland plantings and the Lavender Hill super-bloom projects to be completed near the Carquinez Bridge.",
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Crockett Community Foundation',
+        description:
+          "In 2020 and 2021, the Crockett Community Foundation funded irrigation system improvements and greenhouse improvements to make the CREEC nursery more functional and environmentally efficient. It has also funded an environmental assessment of the Carquinez Waterfront as part of a community-wide effort to develop it into an open space where the community can gather.",
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Contra Costa Resource Conservation District (CCRCD)',
+        description:
+          "CREEC and the CCRCD partner on many projects and activities including tree plantings, shoreline cleanups, and grants. CREEC and the CCRCD are currently developing an environmental education curriculum that teaches students how to sustain their local environment.",
+        icon: 'tabler:template',
+      },
+    ]}
+  />
+ 
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+  title="For More Information"
+  tagline="Contact us"
+  columns={2}
+  items={[
+    {
+      title: 'Chat with us',
+      description:
+        'https://www.facebook.com/CREECYouth',
+      icon: 'tabler:messages',
+    },
+    {
+      title: 'Email us',
+      description:
+        'CREECcarquinez@gmail.com',
+      icon: 'tabler:mail',
+    },
+  ]}
+/>
+</Layout>

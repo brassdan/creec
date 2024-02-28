@@ -1,6 +1,6 @@
 site:
   name: CREEC
-  site: 'https://astrowind.vercel.app'
+  site: 'https://www.creecyouth.org'
   base: '/'
   trailingSlash: false
 
