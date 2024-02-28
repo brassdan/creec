@@ -11,7 +11,7 @@ export const headerData = {
     },
     {
       text: 'Partners and Friends',
-      href: getPermalink('/homes/personal'),
+      href: getPermalink('/landing/product'),
     },
     {
       text: 'Blog',
