@@ -1,9 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
@@ -14,7 +12,6 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
-
   <Hero
     actions={[
       {
@@ -22,7 +19,7 @@ const metadata = {
         text: 'Donate',
         href: 'https://github.com/onwidget/astrowind',
         target: '_blank',
-        icon: 'tabler:download',
+        icon: 'tabler:heart-dollar',
       },
       { text: 'Learn more', href: '#features' },
     ]}
@@ -51,20 +48,20 @@ const metadata = {
       {
         title: 'Educating Local Youth',
         description:
-          'CREEC&#39;s Youth Program teaches students from nearby communities how to be environmental stewards and how to propagate and grow native plants.',
-        icon: 'tabler:brand-tailwind',
+          'CREEC&#39;s Youth Program teaches students from nearby communities how to be environmental stewards who propagate and grow native plants.',
+        icon: 'tabler:school',
       },
       {
         title: 'Growing Local Natives',
         description:
-          'CREEC grows an impressive number of native California plant species, including many local natives. At CREEC, you can find native plants that are difficult to find elsewhere.',
-        icon: 'tabler:components',
+          'CREEC grows an impressive number of native California plant species, including many local natives. Our native plants are difficult to find elsewhere.',
+        icon: 'tabler:plant',
       },
       {
         title: 'Tree Plantings',
         description:
           'CREEC volunteers have planted dozens of native trees and shrubs along the Carquinez Strait, providing food and habitat for local wildlife.',
-        icon: 'tabler:list-check',
+        icon: 'tabler:trees',
       },
       {
         title: 'Fruitful Partnerships',
@@ -73,18 +70,6 @@ const metadata = {
         icon: 'tabler:rocket',
       },
     ]}
-  />
-
-
-
-  <!-- HighlightedPosts Widget ******* -->
-
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
   />
 
   <!-- CallToAction Widget *********** -->
@@ -96,24 +81,24 @@ const metadata = {
         text: 'Donate',
         href: 'https://github.com/onwidget/astrowind',
         target: '_blank',
-        icon: 'tabler:download',
+        icon: 'tabler:heart-dollar',
       },
     ]}
-  >
-</CallToAction>
+   title=' Make a donation today!'
+  />
 
-    <!-- CallToAction Widget *********** -->
+  <!-- CallToAction Widget *********** -->
 
-    <CallToAction
+  <CallToAction
     actions={[
       {
-        variant: 'primary',
+       variant: 'primary',
         text: 'Join Our Mailing List',
         href: 'https://github.com/onwidget/astrowind',
         target: '_blank',
-        icon: 'tabler:download',
+        icon: 'tabler:mail',
       },
     ]}
-  >
-  </CallToAction>
+    title='Help us keep you up to date on CREEC events'
+  />
 </Layout>
