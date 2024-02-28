@@ -17,10 +17,6 @@ export const headerData = {
       text: 'Blog',
       href: getBlogPermalink(),
     },
-    {
-      text: 'Widgets',
-      href: '#',
-    },
   ],
   actions: [{ text: 'Donate', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
 };
