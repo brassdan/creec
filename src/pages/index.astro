@@ -4,21 +4,12 @@ import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
-import { z } from "zod";
-import { createForm } from "simple:form";
-
-export const subscribeForm = createForm({
-  name: z.string(),
-  email: z.string().email(),
-  disclaimer: z.boolean()
-});
+import { SubscribeForm } from "./_subscribeForm";
 
 const metadata = {
   title: 'CREEC — Carquinez Regional Environmental Education Center',
   ignoreTitleTemplate: true,
 };
-
-const res = await Astro.locals.form.getData(subscribeForm);
 
 ---
 
@@ -119,25 +110,6 @@ const res = await Astro.locals.form.getData(subscribeForm);
         'By submitting this form, you acknowledge and agree to the collection of your personal information.',
     }}
     description="Get news about CREEC events and volunteer opportunities!"
-  />
-<form method = "POST">
-  <label for="name">Name</label>
-  <input id="name" {...subscribeForm.inputProps.name} required/>
-  <label for="email">Email</label> 
-  <input id="email" {...subscribeForm.inputProps.email} required/>
-  {
-    res?.fieldErrors?.email?.map((error) => 
-      <p class ="error">{error}</p>
-    ) 
-  }
-  <label for="disclaimer">By submitting this form, you acknowledge and agree to the collection of your personal information.</label>
-  <input id="disclaimer" {...subscribeForm.inputProps.disclaimer} />
-  {
-    res?.fieldErrors?.disclaimer?.map((error) => 
-      <p class="error">{error}</p>
-    ) 
-  }
-  <button type="submit">Subscribe</button>
-
-</form>
+  /> 
+<SubscribeForm client:load />
 </Layout>
