@@ -14,6 +14,7 @@ import react from "@astrojs/react";
 import markdoc from "@astrojs/markdoc";
 import keystatic from '@keystatic/astro';
 import cloudflare from "@astrojs/cloudflare";
+import simpleStackForm from "simple-stack-form";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const whenExternalScripts = (items = []) => ANALYTICS.vendors.googleAnalytics.id && ANALYTICS.vendors.googleAnalytics.partytown ? Array.isArray(items) ? items.map(item => item()) : [items()] : [];
 
@@ -46,7 +47,7 @@ export default defineConfig({
     JavaScript: true,
     SVG: false,
     Logger: 1
-  }), tasks(), react(), markdoc(), keystatic()],
+  }), tasks(), react(), markdoc(), keystatic(), simpleStackForm()],
   image: {
     service: squooshImageService()
   },

@@ -31,8 +31,10 @@
     "lodash.merge": "^4.6.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "simple-stack-form": "^0.1.12",
     "typescript-esbuild": "^0.3.6",
-    "unpic": "^3.16.0"
+    "unpic": "^3.16.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@astrojs/mdx": "^2.1.0",
