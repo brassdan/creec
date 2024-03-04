@@ -122,9 +122,9 @@ const res = await Astro.locals.form.getData(subscribeForm);
   />
 <form method = "POST">
   <label for="name">Name</label>
-  <input id="name" {...subscribeForm.inputProps.name} />
+  <input id="name" {...subscribeForm.inputProps.name} required/>
   <label for="email">Email</label> 
-  <input id="email" {...subscribeForm.inputProps.email} />
+  <input id="email" {...subscribeForm.inputProps.email} required/>
   {
     res?.fieldErrors?.email?.map((error) => 
       <p class ="error">{error}</p>
